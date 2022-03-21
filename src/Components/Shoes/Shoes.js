@@ -1,15 +1,16 @@
 import React from 'react';
-import { multiply } from '../../utilities/caculate';
+import { add, multiply } from '../../utilities/caculate';
 
 const Shoes = () => {
     const first = 22;
     const second = 11;
-    const total = multiply(first, second)
+    const total = multiply(first, second);
+    const sum = add(first, second);
 
     return (
         <div>
             <h2>Shoes component </h2>
-            <h3>Shoes are : {total}</h3>
+            <h3>Product are : {total} and addition are {sum}</h3>
         </div>
     );
 };

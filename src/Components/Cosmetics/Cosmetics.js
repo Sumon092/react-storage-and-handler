@@ -1,15 +1,23 @@
 import React from 'react';
-import { add } from '../../utilities/caculate';
-// import add from '../../utilities/caculata';
+import Cosmetic from '../Cosmetic/Cosmetic';
+
 
 const Cosmetics = () => {
-    const first = 55;
-    const second = 66;
-    const total = add(first, second);
+    const cosmetics = [
+        { id: 1, name: 'Alta', price: 100 },
+        { id: 2, name: 'Palish', price: 200 },
+        { id: 3, name: 'Malish', price: 300 },
+        { id: 4, name: 'Balish', price: 400 },
+        { id: 5, name: 'Nalish', price: 500 },
+    ]
     return (
         <div>
-            <h2>Welcome to cosmetics store</h2>
-            <h3>Total Price : {total}</h3>
+            <h1>Welcome to cosmetics store</h1>
+            {
+                cosmetics.map(cosmetic => <Cosmetic
+                    key={cosmetic.id}
+                    cosmetic={cosmetic}></Cosmetic>)
+            }
         </div>
     );
 };
